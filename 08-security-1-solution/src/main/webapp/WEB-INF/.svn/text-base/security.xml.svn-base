@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<global-method-security pre-post-annotations="enabled"/>
+
+	<http use-expressions="true" access-denied-page="/pages/static/accessDenied.jsf">
+		<intercept-url pattern="/login.jsf" filters="none" />
+		<intercept-url pattern="/pages/template/**" access="isAuthenticated()" />
+		<intercept-url pattern="/pages/account/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/pages/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<form-login login-page="/login.jsf" 
+			default-target-url="/pages/template/welcome.jsf"
+			authentication-failure-url="/login.jsf?state=failure" />
+		<logout logout-success-url="/login.jsf?state=logout" />
+	</http>
+ 	
+	<!-- Configure Authentication mechanism -->
+    <authentication-manager>
+        <authentication-provider user-service-ref="userDao">
+            <password-encoder ref="passwordEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>

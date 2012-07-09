@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/joedayz/SpringRichFaces/!svn/ver/125/08-security-1-solution/src/main/webapp/WEB-INF
+END
+.faces-config.xml.jsfdia
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/joedayz/SpringRichFaces/!svn/ver/135/08-security-1-solution/src/main/webapp/WEB-INF/.faces-config.xml.jsfdia
+END
+faces-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/joedayz/SpringRichFaces/!svn/ver/135/08-security-1-solution/src/main/webapp/WEB-INF/faces-config.xml
+END
+security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/joedayz/SpringRichFaces/!svn/ver/141/08-security-1-solution/src/main/webapp/WEB-INF/security.xml
+END
+springsecurity.taglib.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/joedayz/SpringRichFaces/!svn/ver/125/08-security-1-solution/src/main/webapp/WEB-INF/springsecurity.taglib.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/joedayz/SpringRichFaces/!svn/ver/135/08-security-1-solution/src/main/webapp/WEB-INF/web.xml
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/joedayz/SpringRichFaces/!svn/ver/44/08-security-1-solution/src/main/resources/accounts/testdb
+END
+reward.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/joedayz/SpringRichFaces/!svn/ver/44/08-security-1-solution/src/main/resources/accounts/testdb/reward.sql
+END
+test-data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/resources/accounts/testdb/test-data.sql
+END
+schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/resources/accounts/testdb/schema.sql
+END

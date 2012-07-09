@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+  <javaee:display-name>jsf-2-solution</javaee:display-name>
+  <context-param>
+    <javaee:param-name>contextConfigLocation</javaee:param-name>
+    <javaee:param-value>classpath*:/TODO 01</javaee:param-value>
+  </context-param>
+  <context-param>
+    <javaee:param-name>javax.faces.DEFAULT_SUFFIX</javaee:param-name>
+    <javaee:param-value>TODO 02</javaee:param-value>
+  </context-param>
+  <context-param>
+    <javaee:param-name>org.ajax4jsf.VIEW_HANDLERS</javaee:param-name>
+    <javaee:param-value>com.sun.facelets.FaceletViewHandler</javaee:param-value>
+  </context-param>
+  <listener>
+    <javaee:listener-class>org.springframework.web.context.ContextLoaderListener</javaee:listener-class>
+  </listener>
+  <listener>
+    <javaee:listener-class>org.springframework.web.util.IntrospectorCleanupListener</javaee:listener-class>
+  </listener>
+  <listener>
+    <javaee:listener-class>org.springframework.web.context.request.RequestContextListener</javaee:listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/joedayz/SpringRichFaces/!svn/ver/68/05-jsf-2-start/src/main/resources/accounts/testdb
+END
+test-data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/joedayz/SpringRichFaces/!svn/ver/68/05-jsf-2-start/src/main/resources/accounts/testdb/test-data.sql
+END
+schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/joedayz/SpringRichFaces/!svn/ver/68/05-jsf-2-start/src/main/resources/accounts/testdb/schema.sql
+END

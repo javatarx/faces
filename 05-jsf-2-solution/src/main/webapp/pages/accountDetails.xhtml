@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:composition template="/pages/template/template.xhtml">
+		<ui:define name="body">
+			<h:form>
+				<h:panelGrid columns="2" title="Account Details">
+					<f:facet name="header">
+						<h:outputText value="Account" />
+					</f:facet>
+					
+					<h:outputText value="Id:" />
+					<h:outputText value="#{account.account.entityId}" />			
+					
+					<h:outputText value="Name:" />
+					<h:outputText value="#{account.account.name}" />
+					
+					<h:outputText value="Number: " />
+					<h:outputText value="#{account.account.number}" />
+				</h:panelGrid>
+				
+				<h:dataTable value="#{account.account.beneficiariesList}" var="item" border="1">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Name"/>
+						</f:facet>	
+						<h:outputText value="#{item.name}"/>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Percentage"/>
+						</f:facet>	
+						<h:outputText value="#{item.allocationPercentage}"/>
+					</h:column>	
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Savings"/>
+						</f:facet>	
+						<h:outputText value="#{item.savings}"/>
+					</h:column>											
+				</h:dataTable>				
+			</h:form>			
+		</ui:define>
+	</ui:composition>
+</html>

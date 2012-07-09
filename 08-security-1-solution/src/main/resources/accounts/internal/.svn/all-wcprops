@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/joedayz/SpringRichFaces/!svn/ver/128/08-security-1-solution/src/main/resources/accounts/internal
+END
+Account.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/joedayz/SpringRichFaces/!svn/ver/128/08-security-1-solution/src/main/resources/accounts/internal/Account.hbm.xml
+END
+User.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/joedayz/SpringRichFaces/!svn/ver/128/08-security-1-solution/src/main/resources/accounts/internal/User.hbm.xml
+END
+Beneficiary.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/joedayz/SpringRichFaces/!svn/ver/128/08-security-1-solution/src/main/resources/accounts/internal/Beneficiary.hbm.xml
+END
+Role.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/joedayz/SpringRichFaces/!svn/ver/128/08-security-1-solution/src/main/resources/accounts/internal/Role.hbm.xml
+END

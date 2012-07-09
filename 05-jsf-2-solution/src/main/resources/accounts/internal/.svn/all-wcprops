@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/joedayz/SpringRichFaces/!svn/ver/7/05-jsf-2-solution/src/main/resources/accounts/internal
+END
+Account.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/joedayz/SpringRichFaces/!svn/ver/7/05-jsf-2-solution/src/main/resources/accounts/internal/Account.hbm.xml
+END
+Beneficiary.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/joedayz/SpringRichFaces/!svn/ver/7/05-jsf-2-solution/src/main/resources/accounts/internal/Beneficiary.hbm.xml
+END

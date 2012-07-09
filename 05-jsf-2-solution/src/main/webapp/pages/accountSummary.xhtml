@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:composition template="/pages/template/template.xhtml">
+	<ui:define name="body">
+		<h:form title="Accounts List">
+		<h:dataTable value="#{account.accounts}" var="item" border="1">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Name"/>
+				</f:facet>	
+				<h:commandLink action="#{account.accountDetails}" value="#{item.name}">
+					<f:param name="id" value="#{item.entityId}"/>
+				</h:commandLink>
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Number"/>
+				</f:facet>	
+				<h:outputText value="#{item.number}"/>
+			</h:column>						
+		</h:dataTable>
+		</h:form>
+	</ui:define>
+	</ui:composition>
+</html>

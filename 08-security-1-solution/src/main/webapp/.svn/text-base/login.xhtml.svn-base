@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jstl/core" 
+>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link media='rich-extended-skinning' href='#{request.contextPath}/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_both.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf' type='text/css' rel='stylesheet' class='component' />
+<link href="#{request.contextPath}/css/default.css"  rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+
+<div class="section">
+	<p>Valid username/passwords are:</p>
+	<ul>
+		<li>admin/admin</li>
+	    <li>user/user</li>
+	</ul>
+</div>
+<c:set var="username" value=""/>
+
+<c:if test="${param.state=='failure'}">
+		<c:set var="username" value="#{sessionScope.SPRING_SECURITY_LAST_USERNAME}"/>
+		<div class="ERROR">
+			Your login attempt was not successful, try again.<br />
+			Reason: #{sessionScope.SPRING_SECURITY_LAST_EXCEPTION.message}
+		</div>
+</c:if>
+
+	<form  action="#{request.contextPath}/j_spring_security_check" method="post">
+		<h:panelGrid columns="2" title="Customer">
+			<f:facet name="header"> 
+				<h:outputText value="Login form" />
+			</f:facet>
+			<h:outputText value="User:" />
+			<h:inputText id="j_username" value="#{username}"  />
+			<h:outputText value="Password:" />
+			<h:inputSecret id="j_password" />
+			<f:facet name="footer"> 
+				<h:commandButton  value="Login" type="submit"  />
+			</f:facet>
+		</h:panelGrid>
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#account#accountSummary.xhtml"
+  PATH="/pages/account/accountSummary.xhtml" SHAPE="32,161,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#account#accountSummary.xhtml:0"
+   NAME="item" PATH="/pages/account/accountSummary.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="add::#pages#account#accountDetails.xhtml"
+    NAME="output" PATH="/pages/account/accountDetails.xhtml"
+    TARGET="rules:#pages#account#accountDetails.xhtml" TITLE="add" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="success::#pages#account#accountDetails.xhtml" NAME="output1"
+    PATH="/pages/account/accountDetails.xhtml"
+    TARGET="rules:#pages#account#accountDetails.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#account#accountDetails.xhtml"
+  PATH="/pages/account/accountDetails.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#account#accountDetails.xhtml:0"
+   NAME="item" PATH="/pages/account/accountDetails.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancel::#pages#account#accountSummary.xhtml"
+    NAME="output" PATH="/pages/account/accountSummary.xhtml"
+    TARGET="rules:#pages#account#accountSummary.xhtml" TITLE="cancel" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="success::#pages#account#accountSummary.xhtml" NAME="output1"
+    PATH="/pages/account/accountSummary.xhtml"
+    TARGET="rules:#pages#account#accountSummary.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

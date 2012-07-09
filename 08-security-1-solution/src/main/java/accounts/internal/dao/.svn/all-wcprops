@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/java/accounts/internal/dao
+END
+UserDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/java/accounts/internal/dao/UserDao.java
+END
+UserDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/java/accounts/internal/dao/UserDaoHibernate.java
+END
+RoleDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/java/accounts/internal/dao/RoleDao.java
+END
+RoleDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/java/accounts/internal/dao/RoleDaoHibernate.java
+END
+AccountRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/joedayz/SpringRichFaces/!svn/ver/42/08-security-1-solution/src/main/java/accounts/internal/dao/AccountRepository.java
+END
+HibernateAccountRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/joedayz/SpringRichFaces/!svn/ver/141/08-security-1-solution/src/main/java/accounts/internal/dao/HibernateAccountRepository.java
+END

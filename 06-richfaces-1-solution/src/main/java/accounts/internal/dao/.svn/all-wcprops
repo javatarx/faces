@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/joedayz/SpringRichFaces/!svn/ver/16/06-richfaces-1-solution/src/main/java/accounts/internal/dao
+END
+AccountRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/joedayz/SpringRichFaces/!svn/ver/33/06-richfaces-1-solution/src/main/java/accounts/internal/dao/AccountRepository.java
+END
+HibernateAccountRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/joedayz/SpringRichFaces/!svn/ver/34/06-richfaces-1-solution/src/main/java/accounts/internal/dao/HibernateAccountRepository.java
+END

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:rich="http://richfaces.org/rich">
+
+<ui:composition template="/pages/template/template.xhtml">
+<ui:define name="body">
+<f:view>
+	<a4j:form>
+		<rich:panel>
+			<f:facet name="header">
+				<h:outputText value="Account Details" />
+			</f:facet>
+			<h:panelGrid columns="1" title="Account" >
+				
+				<h:outputText value="Account Id: " />
+				<h:outputText value="#{account.account.entityId}" />
+				
+				<h:outputText value="Name: " />
+				<h:inputText id="name" value="#{account.account.name}" maxlength="20">
+					<rich:ajaxValidator event="onkeyup"/>
+				</h:inputText>
+				<rich:message for="name"/>
+				
+				<h:outputText value="Number: " />
+				<h:inputText id="number" value="#{account.account.number}" maxlength="10">
+					<rich:ajaxValidator event="onkeyup"/>
+				</h:inputText>
+				<rich:message for="number"/>				
+
+				<h:inputHidden value="#{account.account.entityId}" />
+				
+				<h:panelGroup>
+					<a4j:commandButton  action="#{account.updateAccount}" value="Update"/>
+					<c:if test="${not empty account.account.entityId}">
+						<a4j:commandButton action="#{account.deleteAccount}" value="Delete"/>					
+					</c:if>
+				</h:panelGroup>					
+			</h:panelGrid>			
+		</rich:panel>
+	</a4j:form>
+</f:view>
+</ui:define>
+</ui:composition>
+</html>
