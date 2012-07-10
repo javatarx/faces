@@ -2,6 +2,8 @@ package accounts.web;
 
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+
 import accounts.Account;
 import accounts.internal.service.AccountManager;
 
@@ -19,9 +21,25 @@ public class AccountController extends BasePage {
 	
 	public String accountDetails(){
 		id = getParameter("id");
-		account = accountManager.getAccount(new Long(id));
+		if(id!=null){
+			account = accountManager.getAccount(new Long(id));
+		}
 		return "accountDetails";
-	}	
+	}
+	public String updateAccount(){
+		if(account.getEntityId() == null || 
+			StringUtils.isBlank(account.getEntityId().toString()) ||
+			account.getEntityId().toString().equalsIgnoreCase("0")){
+			account.setEntityId(null);
+		}
+		accountManager.update(account);
+		return "accountSummary";
+	}
+
+	public String deleteAccount(){
+		accountManager.delete(account.getEntityId());
+		return "accountSummary";
+	}
 		
 	public void setAccountManager(AccountManager accountManager) {
 		this.accountManager = accountManager;

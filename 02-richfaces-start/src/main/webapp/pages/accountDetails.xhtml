@@ -7,7 +7,7 @@
       xmlns:c="http://java.sun.com/jstl/core"
       xmlns:rich="http://richfaces.org/rich">
 
-<ui:composition template="TODO">
+<ui:composition template="/pages/template/template.xhtml">
 <ui:define name="body">
 <f:view>
 	<a4j:form>
@@ -18,26 +18,26 @@
 			<h:panelGrid columns="1" title="Account" >
 				
 				<h:outputText value="Account Id: " />
-				<h:outputText value="#{TODO}" />
+				<h:outputText value="#{account.account.entityId}" />
 				
 				<h:outputText value="Name: " />
-				<h:inputText id="name" value="#{TODO}" maxlength="20">
+				<h:inputText id="name" value="#{account.account.name}" maxlength="20">
 					<rich:ajaxValidator event="onkeyup"/>
 				</h:inputText>
 				<rich:message for="name"/>
 				
 				<h:outputText value="Number: " />
-				<h:inputText id="number" value="#{TODO}" maxlength="10">
+				<h:inputText id="number" value="#{account.account.number}" maxlength="10">
 					<rich:ajaxValidator event="onkeyup"/>
 				</h:inputText>
 				<rich:message for="number"/>				
 
-				<h:inputHidden value="#{TODO}" />
+				<h:inputHidden value="#{account.account.entityId}" />
 				
 				<h:panelGroup>
-					<a4j:commandButton  action="#{TODO}" value="Update"/>
-					<c:if test="${not empty TODO}">
-						<a4j:commandButton action="#{TODO}" value="Delete"/>					
+					<a4j:commandButton  action="#{account.updateAccount}" value="Update"/>
+					<c:if test="${not empty account.account.entityId}">
+						<a4j:commandButton action="#{account.deleteAccount}" value="Delete"/>					
 					</c:if>
 				</h:panelGroup>					
 			</h:panelGrid>			
