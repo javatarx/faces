@@ -4,15 +4,15 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	<ui:composition template="TODO">
+	<ui:composition template="/pages/template/template.xhtml">
 	<ui:define name="body">
 		<h:form title="Accounts List">
-		<h:dataTable value="#{TODO}" var="item" border="1">
+		<h:dataTable value="#{account.accounts}" var="item" border="1">
 			<h:column>
 				<f:facet name="header">
 					<h:outputText value="Name"/>
 				</f:facet>	
-				<h:commandLink action="#{TODO}" value="#{item.name}">
+				<h:commandLink action="#{account.accountDetails}" value="#{item.name}">
 					<f:param name="id" value="#{item.entityId}"/>
 				</h:commandLink>
 			</h:column>
@@ -20,10 +20,10 @@
 				<f:facet name="header">
 					<h:outputText value="Number"/>
 				</f:facet>	
-				<h:outputText value="#{TODO}"/>
+				<h:outputText value="#{item.number}"/>
 			</h:column>						
 		</h:dataTable>
 		</h:form>
 	</ui:define>
 	</ui:composition>
-</html></html>
+</html>

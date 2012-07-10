@@ -3,9 +3,24 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
 
+	<managed-bean>
+		<description>account</description>
+		<managed-bean-name>account</managed-bean-name>
+		<managed-bean-class>accounts.web.AccountController</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>accountManager</property-name>
+			<value>#{accountManager}</value><!-- Aqui le inyecta el spring -->
+		</managed-property>
+	</managed-bean>
 
-
-
+	<navigation-rule>
+		<from-view-id>/*</from-view-id>
+		<navigation-case>
+			<from-outcome>accountDetails</from-outcome>
+			<to-view-id>/pages/accountDetails.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 
 	<application>
 		<locale-config>

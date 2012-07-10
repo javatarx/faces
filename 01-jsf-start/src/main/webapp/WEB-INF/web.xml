@@ -6,11 +6,11 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:/TODO 01</param-value>
+		<param-value>classpath*:/application-config.xml</param-value>
 	</context-param>
 	<context-param>
 		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
-		<param-value>TODO 02</param-value>
+		<param-value>.xhtml</param-value>
 	</context-param>
 
 	<context-param>

@@ -24,7 +24,7 @@
             <enabled>true</enabled>
             <updatePolicy>never</updatePolicy>
           </snapshots>
-        </repository>
+        </repository> 
      
       </repositories>	
 
@@ -53,7 +53,7 @@
 			<version>3.3.3.Final</version>
 		</dependency>
 
-		<dependency>
+		<dependency> 
 			<groupId>org.richfaces.framework</groupId>
 			<artifactId>richfaces-api</artifactId>
 			<version>3.3.3.Final</version>
