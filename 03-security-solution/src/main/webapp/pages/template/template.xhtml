@@ -1,0 +1,28 @@
+<!-- template.xhtml -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link media='rich-extended-skinning' href='#{request.contextPath}/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_both.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf' type='text/css' rel='stylesheet' class='component' />
+<link href="#{request.contextPath}/css/default.css"  rel="stylesheet" type="text/css"/>
+<title>richfaces-1-solution: RichFaces Essentials</title>
+</head>
+<body>
+
+<table>
+	<tr>
+	<td colspan="2"><ui:include src="/pages/template/header.xhtml" /></td>
+	</tr>
+	<tr>
+		<td width="200" valign="top"><ui:include src="/pages/template/menu.xhtml" /></td>
+		<td><ui:insert name="body" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right"><small>Usuario identificado: #{user.currentUser}</small> </td>
+	</tr>	
+</table>
+</body>
+</html>

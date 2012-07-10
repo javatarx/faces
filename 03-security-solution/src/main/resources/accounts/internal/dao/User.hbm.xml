@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="accounts" default-access="field">
+    <class name="User" table="app_user"  lazy="false">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <version name="version" type="java.lang.Integer">
+            <column name="version" />
+        </version>
+        <property name="accountExpired" type="boolean">
+            <column name="account_expired" not-null="true" />
+        </property>
+        <property name="accountLocked" type="boolean">
+            <column name="account_locked" not-null="true" />
+        </property>
+        <property name="credentialsExpired" type="boolean">
+            <column name="credentials_expired" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" not-null="true" unique="true" />
+        </property>
+        <property name="enabled" type="java.lang.Boolean">
+            <column name="account_enabled" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="50" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="50" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="passwordHint" type="string">
+            <column name="password_hint" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phone_number" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" />
+        </property>
+        <set name="roles" table="user_role" lazy="false" cascade="save-update">
+            <key column="user_id"></key>
+            <many-to-many class="accounts.Role" column="role_id" outer-join="auto"/>
+        </set>     
+    </class>
+</hibernate-mapping>
